@@ -5,15 +5,10 @@ then using string concatenation to write username in file.
 */
 
 
-console.log('Starting App!!');
+console.log('Starting app.js!!');
 
 const fs = require('fs');
-const os = require('os');
+const _  = require('lodash');
 
-var user = os.userInfo();
-console.log(user);
-fs.appendFile('greetings.txt', `Hello ${user.username} !!`, function(err){
-    if(err){
-        console.log('Unable to write file!!');
-    }
-});
+//Requiring your own file
+const notes = require('./notes.js');
