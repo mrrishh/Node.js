@@ -15,17 +15,27 @@ if(command === 'add'){
     var note = notes.addNote(argv.title, argv.body);
     if(note){
         console.log('Note Created!');
-        console.log('---------------');
-        console.log(`Title: ${note.title}`);
-        console.log(`Body: ${note.body}`);
+        notes.logNote(note);
     }
     else{
         console.log('Note already taken');
     }
 }else if(command==='read'){
-    notes.readNote(argv.title);
+    var note= notes.readNote(argv.title);
+    if(note){
+        console.log('Reading Note!');
+        notes.logNote(note);
+    }
+    else{
+        console.log('Note not found');
+    }
 }else if(command==='list'){
-    notes.getAllNotes();
+    var allNotes = notes.getAllNotes();
+    for(var title in allNotes){
+    console.log(`Title: ${allNotes[title].title}`);
+    console.log(`Body: ${allNotes[title].body}`);
+    console.log('-----------------')
+    }
 }else if(command==='remove'){
     var noteRemoved = notes.removeNote(argv.title);
     var message = noteRemoved ? 'Note was Removed' : 'Note not found';
