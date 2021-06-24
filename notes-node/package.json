@@ -9,6 +9,7 @@
   "author": "Rishabh Nandwal",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "yargs": "^17.0.1"
   }
 }
