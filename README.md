@@ -8,3 +8,4 @@
         ## Read Note from file
         ## List All Note
         ## Delete a Note
+    This application uses the basics of file handling, Getting input from users with YARGS, handling JSON strings and parsing it, Arrow Functions.
