@@ -1,0 +1,11 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather APP through Google Geo Location API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rishabh Nandwal",
+  "license": "ISC"
+}
